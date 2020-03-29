@@ -1,4 +1,7 @@
+import 'package:diapers/Ryan/AllowGPS.dart';
 import 'package:flutter/material.dart';
+
+import 'Ryan/MapScreen.dart';
 
 void main() {
   return runApp(Diapers());
@@ -26,37 +29,38 @@ class LocationPage extends StatelessWidget {
         ),
       ),
       body: Column(
-
         children: <Widget>[
-          Image.network(
-              "https://image.freepik.com/free-vector/man-social-networking-mobile-internet-interaction-people-virtual-connections-male-female-characters-flat_175690-86.jpg"),
+          Image.asset("assets/images/diapers_location_flutter.jpg"),
           Text(
             'We want to access your location',
             style: TextStyle(fontSize: 20),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 150),
-            child: ButtonBar(
+            child: Column(
               children: <Widget>[
+                RaisedButton(
+                    child: Text(
+                      "Pick Manualy",
+                    ),
+                    onPressed: () {
+                      Navigator.push((context),
+                          MaterialPageRoute(builder: (context) {
+                        return MapScreen();
+                      }));
+                    }),
                 RaisedButton(
                   child: Text(
                     "Allow Access",
-                    style: TextStyle(color: Colors.black),
-                    
                   ),
-                  onPressed: null,
-                ),
-                RaisedButton(
-                  child: Text(
-                    "Pick Manualy",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  color: Colors.black,
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push((context),
+                        MaterialPageRoute(builder: (context) {
+                      return AllowGPS();
+                    }));
+                  },
                 ),
               ],
-              alignment: MainAxisAlignment.center,
-              
             ),
           ),
         ],
