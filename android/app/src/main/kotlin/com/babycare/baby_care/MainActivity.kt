@@ -1,4 +1,4 @@
-package com.example.diapers
+package com.babycare.baby_care
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
