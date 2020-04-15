@@ -81,6 +81,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   google_maps_flutter:
     dependency: "direct main"
     description:
@@ -88,6 +89,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.25+2"
+=======
+  font_awesome_flutter:
+    dependency: "direct main"
+    description:
+      name: font_awesome_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "8.8.1"
+>>>>>>> 686fbe41b6db4c4b56a2b735fc099f5f966ddf54
   image:
     dependency: transitive
     description:

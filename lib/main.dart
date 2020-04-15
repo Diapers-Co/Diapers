@@ -1,21 +1,27 @@
-import 'package:diapers/Ryan/AllowGPS.dart';
 import 'package:flutter/material.dart';
+
 import 'Ryan/MapScreen.dart';
+import 'package:baby_care/pages/profile.dart';
+import 'package:baby_care/pages/shop.dart';
+import 'package:baby_care/pages/settings.dart';
+
 
 void main() {
-  return runApp(Diapers());
+  runApp(MyApp());
 }
 
-class Diapers extends StatelessWidget {
+class MyApp extends StatelessWidget{
+
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-      title: 'Location',
-      theme: ThemeData(primarySwatch: Colors.cyan),
-      home: LocationPage(),
+      title: 'Baby Care',
+      home: Shop(),
     );
   }
 }
+
 
 class LocationPage extends StatelessWidget {
   @override
