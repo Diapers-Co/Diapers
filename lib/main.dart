@@ -1,6 +1,5 @@
 import 'package:diapers/Ryan/AllowGPS.dart';
 import 'package:flutter/material.dart';
-
 import 'Ryan/MapScreen.dart';
 
 void main() {
@@ -41,9 +40,10 @@ class LocationPage extends StatelessWidget {
               children: <Widget>[
                 RaisedButton(
                     child: Text(
-                      "Pick Manualy",
+                      "MapScreen",
                     ),
                     onPressed: () {
+
                       Navigator.push((context),
                           MaterialPageRoute(builder: (context) {
                         return MapScreen();
