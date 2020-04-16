@@ -1,79 +1,66 @@
-
-import 'package:baby_care/pages/shop.dart';
 import 'package:flutter/material.dart';
-import 'Ryan/AllowGPS.dart';
-import 'Ryan/MapScreen.dart';
-// import 'package:/pages/profile.dart';
-// import 'package:/pages/shop.dart';
-// import 'package:/pages/settings.dart';
+import 'package:baby_care/pages/settings.dart';
+import 'package:baby_care/pages/shop.dart';
+import 'package:baby_care/pages/profile.dart';
+import 'pages/location.dart';
 
-
-void main() {
-  runApp(MyApp());
+void main() => runApp(new MyApp());
+class MyApp extends StatefulWidget {
+  @override
+  MyAppState createState() => MyAppState();
 }
-
-class MyApp extends StatelessWidget{
-
+class MyAppState extends State<MyApp> {
+  int _selectedTab = 0;
+  final _pageOptions = [
+    Shop(),
+    Profile(),
+    Settings(),
+    LocationPage(),
+  ];
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      title: 'Baby Care',
-      home: Shop(),
-    );
-  }
-}
+      theme: ThemeData(
+          primarySwatch: Colors.grey,
+          primaryTextTheme: TextTheme(
+            title: TextStyle(color: Colors.white),
+          )),
+      home: Scaffold(
 
+        body: _pageOptions[_selectedTab],
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedTab,
+          selectedItemColor: Colors.lightBlueAccent,
+          onTap: (int index) {
+            setState(() {
+              _selectedTab = index;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              title: Text('Shop'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              title: Text('Profile'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.location_on),
+              title: Text('Location'),
+            ),
 
-class LocationPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "data",
-          style: TextStyle(color: Colors.white),
+          ],
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          Image.asset("assets/images/diapers_location_flutter.jpg"),
-          Text(
-            'We want to access your location',
-            style: TextStyle(fontSize: 20),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 150),
-            child: Column(
-              children: <Widget>[
-                RaisedButton(
-                    child: Text(
-                      "MapScreen",
-                    ),
-                    onPressed: () {
-
-                      Navigator.push((context),
-                          MaterialPageRoute(builder: (context) {
-                        return MapScreen();
-                      }));
-                    }),
-                RaisedButton(
-                  child: Text(
-                    "Allow Access",
-                  ),
-                  onPressed: () {
-                    Navigator.push((context),
-                        MaterialPageRoute(builder: (context) {
-                      return AllowGPS();
-                    }));
-                  },
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-      backgroundColor: Color.fromRGBO(252, 251, 239, 1),
     );
-  }
-}
+  }}
+
+
+
+
+

@@ -120,6 +120,18 @@ class _LoginPageState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+        appBar: AppBar(
+          title: Text('Profile',
+            style: TextStyle(
+              fontFamily: 'MonteSerrat',
+              fontWeight: FontWeight.bold,
+              fontSize: 25.0,
+
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Color(0xFFA8D8FF),
+        ),
         body: new Stack(
           children: <Widget>[
             ClipPath(
@@ -128,7 +140,7 @@ class _LoginPageState extends State<Profile> {
             ),
             Positioned.fill(
 
-                top: MediaQuery.of(context).size.height / 5,
+                top: MediaQuery.of(context).size.height / 10,
                 child: Column(
                   children: <Widget>[
                     Container(

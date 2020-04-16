@@ -1,6 +1,8 @@
-import 'package:baby_care/models/category_model.dart';
-import 'package:flutter/material.dart';
+// import 'package:baby_care/models/category_model.dart';
+// import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'package:baby_care/models/category_model.dart';
 
 class Shop extends StatefulWidget {
   Shop({Key key, this.title}) : super(key: key);
@@ -163,7 +165,7 @@ class _ShopState extends State<Shop> {
 
                 Container(
                   height: MediaQuery.of(context).size.height /
-                      2, // Half of screen size
+                      2 - 50, // Half of screen size
                   child: ListView.builder(
                     scrollDirection: Axis.vertical,
                     itemBuilder: (BuildContext context, int index) {
@@ -180,7 +182,7 @@ class _ShopState extends State<Shop> {
                         child: Stack(
                           alignment: Alignment.center,
                           children: <Widget>[
-                            
+
                             Positioned(
                               bottom: 5.0,
                               child: Container(
@@ -258,7 +260,7 @@ class _ShopState extends State<Shop> {
                     itemCount: categories[selectedCategory].subscribtions.length,
                   ),
                 ),
-                
+
 
               ]),
 
@@ -269,3 +271,4 @@ class _ShopState extends State<Shop> {
         ));
   }
 }
+
