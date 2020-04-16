@@ -40,6 +40,7 @@ class MyAppState extends State<MyApp> {
             BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart),
               title: Text('Shop'),
+              backgroundColor: Colors.black
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
