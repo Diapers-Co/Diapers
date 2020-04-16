@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:baby_care/models/category_model.dart';
+import 'package:flutter/material.dart';
+
 
 class Shop extends StatefulWidget {
   Shop({Key key, this.title}) : super(key: key);

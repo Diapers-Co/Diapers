@@ -1,9 +1,11 @@
-import 'package:flutter/material.dart';
 
-import 'Ryan/MapScreen.dart';
-import 'package:baby_care/pages/profile.dart';
 import 'package:baby_care/pages/shop.dart';
-import 'package:baby_care/pages/settings.dart';
+import 'package:flutter/material.dart';
+import 'Ryan/AllowGPS.dart';
+import 'Ryan/MapScreen.dart';
+// import 'package:/pages/profile.dart';
+// import 'package:/pages/shop.dart';
+// import 'package:/pages/settings.dart';
 
 
 void main() {
